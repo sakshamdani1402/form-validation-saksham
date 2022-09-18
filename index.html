@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/982c7783be.js" crossorigin="anonymous"></script>
+    <title>form validation</title>
+</head>
+<body>
+    <div id="modal" class="modal invisible">
+        <div class="modal-body">
+            <h4> You have successfully Signed-up! </h4>
+            <i onclick="closeModal()" class="fa-sharp fa-solid fa-circle-xmark"></i>
+        </div>
+    </div>
+    <div class="main">
+        <form id="form" class="container">
+            <div class="div">
+                <h1>Register</h1>
+            </div>
+            <div class="input-divs">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <p id='user-msg' class="msg hidden">Username must be between 3 and 25 characters</p>
+            </div>
+            <div class="input-divs">
+                <label for="Email">Email:</label>
+                <input type="text" id="email" required>
+                <p id="email-msg" class="msg hidden">Not an Email</p>
+
+            </div>
+            <div class="input-divs">
+                <label for="pass">Password:</label>
+                <div class="password-field">
+                    <input type="password" class="password" id="password" required>
+                    <i class="fa-regular fa-eye-slash" id="toggle"></i>
+                </div>
+                <p id="pass-msg" class="msg hidden">Password must be atleast 8 characters and should include 
+                    atleat 1 lowercase, 1 uppercase, 1 number and 1 special character in (!@#$%^&*)</p>
+
+            </div>
+            <div class="input-divs">
+                <label for="conf-pass">Confirm Password:</label>
+                <input type="password" id="conf-password" required>
+                <p id="conf-pass-msg" class="msg hidden">Passwords mismatch</p>
+                
+            </div>
+            <div class="input-divs">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

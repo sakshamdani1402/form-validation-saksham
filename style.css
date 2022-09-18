@@ -1,0 +1,149 @@
+:root {
+    --grey: rgb(164, 164, 164);
+    --green: rgb(75, 212, 81);
+    --red: rgba(248, 11, 11, 0.847);
+    --blue: rgb(58, 92, 240);
+    --field-height : 30px;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    width: 40%;
+    background: #ffffff;
+    box-shadow: 23px 23px 46px #cfcfcf,
+        -23px -23px 46px #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.input-divs{
+    width: 85%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin : 1%;
+}
+.input-divs label{
+    color: var(--grey);
+}
+.password-field{
+    position: relative;
+}
+.password-field *{
+    height: 100%;
+    position: relative;
+}
+.password-field i{
+    position: absolute;
+    top: 25%;
+    right: 5px;
+    cursor: pointer;
+    color: var(--grey);
+}
+.input-divs input{
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--grey);
+    border-radius: 5px;
+    height: var(--field-height);
+    transition: border 250ms ease-in;
+}
+.invalid{
+    border: 2px solid var(--red) !important;
+}
+.valid{
+    border: 2px solid var(--green) !important;
+}
+
+.submit{
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 3%;
+    width: 102%;
+    border-radius: 5px;
+    margin-top:5%;
+}
+.hidden{
+    display: none;
+}
+.msg{
+    margin: 2px;
+    color: var(--red);
+    font-size: 12px;
+}
+
+
+/*  POPUP MODAL */
+
+.modal{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(29, 29, 29, 0.352);
+}
+
+.modal-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    width: 30%;
+    padding: 1% 2%;
+    background-color: white;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+}
+.modal-body h4{
+    color: var(--green) ;
+}
+.modal-body i{
+    color: var(--grey);
+    transition: 150ms ease-in color;
+    font-size: larger;
+}
+.modal-body i:hover{
+    color: var(--red);
+}
+.invisible{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 80%;
+    }
+    .modal-body{
+        width : 80%;
+        padding-right:10px;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) 
+and (min-width: 600px) {
+    .container{
+         width: 70%;
+    }
+    .modal-body{
+        width : 50%
+    }
+}
