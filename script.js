@@ -22,7 +22,7 @@ function closeModal(){
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    if(valid()) showModal();
+    if(valid()) showModal(); 
 })
 
 function showErr(item) {
